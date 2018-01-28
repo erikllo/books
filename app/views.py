@@ -1,4 +1,5 @@
 from app import app
+from flask import render_template
 
 @app.route("/")
 def hello():
@@ -6,3 +7,6 @@ def hello():
 @app.route("/maple")
 def maple():
     return "<h1 style='color:brown'>Hello Maple!</h1>"
+@app.route("/example")
+def example():
+    return render_template('example.html')
